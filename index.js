@@ -1,4 +1,8 @@
 /* eslint-disable no-plusplus */
+const addButton = document.getElementById('addme');
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const addBook = document.getElementById('myShelve');
 let books = [];
 
 function removeBook() {
@@ -40,11 +44,6 @@ function displayBook() {
 }
 
 displayBook();
-
-const form = document.querySelector('#form');
-const titled = document.querySelector('#title');
-const authored = document.querySelector('#author');
-const ids = books.length + 1;
 function addBook() {
   if (BooksObj !== null) {
     books.push({ id: ids, title: titled.value, author: authored.value });
