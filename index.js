@@ -4,8 +4,8 @@ const titled = document.querySelector('#title');
 const authored = document.querySelector('#author');
 
 class Books {
-  constructor(title, author) {
-    this.id
+  constructor(id, title, author) {
+    this.id = id;
     this.title = title;
     this.author = author;
   }
