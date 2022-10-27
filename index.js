@@ -48,10 +48,9 @@ addButton.addEventListener('click', (e) => {
     localStorage.setItem('books', JSON.stringify(books));
   }
   // clear the form after inputs
-  title.value = "";
-  author.value= "";
+  title.value = '';
+  author.value = '';
 });
-
 
 // remove btn
 const remove = document.querySelectorAll('.remove');
@@ -59,10 +58,10 @@ remove.forEach((item) => {
   item.addEventListener('click', () => {
     item.parentElement.remove();
     const bookname = item.name;
-// remove the object from the local storage
+    // remove the object from the local storage
     const getremove = JSON.parse(localStorage.getItem('books'));
     const newArr = getremove.filter((object) => object.title !== bookname);
-// update the local storage with the new object array
+    // update the local storage with the new object array
     localStorage.setItem('books', JSON.stringify(newArr));
   });
 });
