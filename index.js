@@ -24,7 +24,6 @@ const books = [
       }
       removeBook();
   }
-console.log(books)
 
   displayBook();
   function remove(i) {
@@ -40,3 +39,17 @@ console.log(books)
           });
       }
   }
+
+  function addBook() {
+    const form = document.querySelector("#form");
+    const titled = document.querySelector("#title").value;
+    const authored = document.querySelector("#author").value;
+    const ids = books.length+1;
+    books.push({ id: ids, title: titled, author: authored });
+  }
+  
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    addBook();
+  });
+  
