@@ -4,26 +4,31 @@
 }
 
 .nav-items {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    border: 2px solid black;
-    padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 12px;
 }
 
 .nav-items ul {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .nav-items li {
-    list-style: none;
+  list-style: none;
+  padding-right: 10px;
+}
+
+.nav-items li:nth-child(-n + 2) {
+  border-right: 3px solid black;
 }
 
 .main-page {
-    margin: 50px;
+  margin: 50px;
 }
