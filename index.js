@@ -1,8 +1,5 @@
 /* eslint-disable no-plusplus */
-const books = [
-  { id: 1, title: 'The Alchemist', author: 'Paulo Coelho' },
-  { id: 2, title: 'The Power of Now', author: 'Eckhart Tolle' },
-];
+let books = [];
 
 function removeBook() {
   const removeBtn = document.querySelectorAll('.remove-btn');
@@ -13,6 +10,11 @@ function removeBook() {
     });
   }
 }
+
+// saving the objects in local storage
+const localBook = JSON.stringify(books);
+localStorage.setItem('books', localBook);
+const BooksObj = JSON.parse(localStorage.getItem('books'));
 
 function displayBook() {
   const shelveDiv = document.getElementById('bookList');
@@ -44,7 +46,11 @@ const titled = document.querySelector('#title');
 const authored = document.querySelector('#author');
 const ids = books.length + 1;
 function addBook() {
-  books.push({ id: ids, title: titled.value, author: authored.value});
+  if (BooksObj !== null) {
+    books.push({ id: ids, title: titled.value, author: authored.value });
+  } else {
+    books = BooksObj;
+  }
 }
 
 form.addEventListener('submit', (e) => {
