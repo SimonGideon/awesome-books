@@ -1,19 +1,5 @@
 /* eslint-disable no-plusplus */
-const form = document.querySelector('#form');
-const titled = document.querySelector('#title');
-const authored = document.querySelector('#author');
-
-class Books {
-  constructor(title, author) {
-    this.id
-    this.title = title;
-    this.author = author;
-  }
-}
-
 let books = [];
-const ids = books.length + 1;
-const bookShelve = new Books(ids, titled.value, authored.value);
 
 function removeBook() {
   const removeBtn = document.querySelectorAll('.remove-btn');
@@ -55,9 +41,13 @@ function displayBook() {
 
 displayBook();
 
+const form = document.querySelector('#form');
+const titled = document.querySelector('#title');
+const authored = document.querySelector('#author');
+const ids = books.length + 1;
 function addBook() {
   if (BooksObj !== null) {
-    books.push(bookShelve);
+    books.push({ id: ids, title: titled.value, author: authored.value });
   } else {
     books = BooksObj;
   }
