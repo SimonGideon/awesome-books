@@ -1,8 +1,4 @@
 /* eslint-disable no-plusplus */
-function Book(title, author) {
-  this.title = title;
-  this.author = author;
-}
 let books = [];
 
 function removeBook() {
@@ -15,22 +11,11 @@ function removeBook() {
   }
 }
 
+// saving the objects in local storage
+const localBook = JSON.stringify(books);
+localStorage.setItem('books', localBook);
+const BooksObj = JSON.parse(localStorage.getItem('books'));
 
-if (localStorage.getItem('books') !== null) {
-  const getbook = JSON.parse(localStorage.getItem('books'));
-
-  getbook.forEach((item) => {
-    addBook.innerHTML += `
-      <div>
-        <p>${item.title}</p>
-        <p>${item.author}</p>
-        <button class="remove" name="${item.title}">Remove</button>
-        <hr>
-      </div>
-    `;
-  });
-}
-/* 
 function displayBook() {
   const shelveDiv = document.getElementById('bookList');
   for (let i = 0; i < books.length; i++) {
