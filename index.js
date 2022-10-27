@@ -5,6 +5,7 @@ const authored = document.querySelector('#author');
 
 class Books {
   constructor(title, author) {
+    this.id
     this.title = title;
     this.author = author;
   }
@@ -12,7 +13,7 @@ class Books {
 
 let books = [];
 const ids = books.length + 1;
-const bookShelve = new Books(titled.value, authored.value);
+const bookShelve = new Books(ids, titled.value, authored.value);
 
 function removeBook() {
   const removeBtn = document.querySelectorAll('.remove-btn');
