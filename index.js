@@ -51,5 +51,6 @@ const books = [
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     addBook();
+    displayBook()
   });
   
