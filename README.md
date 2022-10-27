@@ -13,9 +13,14 @@
 ## Getting Started
 
 **Setting up this project locally**
-- Clone the repo to you local repo.
-*maintain the directory pattern of the folders*
-- Open the `index.html` file in your browser.
+> ## How should it be tested
+> Clone the repository
+> 
+> ```
+> git clone https://github.com/SimonGideon/awesome-books
+> ```
+> 
+> Navigate to the folder
 
 *🎉Congratulations you're done*✨
 
