@@ -47,22 +47,22 @@ addButton.addEventListener('click', (e) => {
     books.push(book1);
     localStorage.setItem('books', JSON.stringify(books));
   }
+  // clear the form after inputs
+  title.value = "";
+  author.value= "";
 });
 
-/* remove button */
-const remove = document.querySelectorAll('.remove');
 
+// remove btn
+const remove = document.querySelectorAll('.remove');
 remove.forEach((item) => {
   item.addEventListener('click', () => {
     item.parentElement.remove();
     const bookname = item.name;
-
-    /* remove from localStorage */
+// remove the object from the local storage
     const getremove = JSON.parse(localStorage.getItem('books'));
-
     const newArr = getremove.filter((object) => object.title !== bookname);
-
-    /* update localstorage */
+// update the local storage with the new object array
     localStorage.setItem('books', JSON.stringify(newArr));
   });
 });
