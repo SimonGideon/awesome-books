@@ -9,6 +9,21 @@ function Book(title, author) {
   this.author = author;
 }
 
+// maintain the list on refresh page
+if (localStorage.getItem('books') !== null) {
+  const getbook = JSON.parse(localStorage.getItem('books'));
+  getbook.forEach((item) => {
+    addBook.innerHTML += `
+      <div>
+        <p>${item.title}</p>
+        <p>${item.author}</p>
+        <button class="remove" name="${item.title}">Remove</button>
+        <hr>
+      </div>
+    `;
+  });
+}
+
 addButton.addEventListener('click', (e) => {
   e.preventDefault();
 
@@ -34,7 +49,7 @@ addButton.addEventListener('click', (e) => {
   }
 });
 
-* remove button */
+/* remove button */
 const remove = document.querySelectorAll('.remove');
 
 remove.forEach((item) => {
