@@ -4,10 +4,15 @@ const title = document.getElementById('title');
 const author = document.getElementById('author');
 const addBook = document.getElementById('myShelve');
 
+class Books {
+  constructor(id, title, author) {
+    this.id = id;
+    this.title = title;
+    this.author = author;
+  }
 function Book(title, author) {
   this.title = title;
   this.author = author;
-}
 
 // maintain the list on refresh page
 if (localStorage.getItem('books') !== null) {
