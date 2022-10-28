@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book-Shelve</title>
-    <script src="index.js" defer></script>
   </head>
   <body>
-    <h1>Awesome books</h1>
-    <div id="bookList">
+      <ul>
+        <li>List</li>
+        <li>Add new</li>
+        <li>Contact</li>
+      </ul>
     </div>
-    <form id="form">
-      <ul>
-        <input id="title" type="text" placeholder="Title" name="title" autocomplete="off"/>
-      </ul>
-      <ul>
-        <input id="author" type="text" placeholder="Author" name="author" autocomplete="off" />
-      </ul>
+    <div class="main-page">
+      <div id="bookList"></div>
+      <form id="form">
+        <ul>
+          <input
+            id="title"
+            type="text"
+            placeholder="Title"
+            name="title"
+            autocomplete="off"
+          />
+        </ul>
+        <ul>
+          <input
+            id="author"
+            type="text"
+            placeholder="Author"
+            name="author"
+            autocomplete="off"
+          />
+        </ul>
+        <button type="submit" id="addme">Add</button>
+      </form>
+    </div>
+
       <button type="submit" id="addme">Add</button>
     </form>
+    <script src="index.js" defer></script>
   </body>
 </html>
