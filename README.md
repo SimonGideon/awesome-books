@@ -10,6 +10,8 @@
 - Javascript
 - GitHub Actions
 
+## ✈️ [Launch](https://simongideon.github.io/awesome-books/)
+
 ## Getting Started
 
 **Setting up this project locally**
