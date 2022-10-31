@@ -1,7 +1,6 @@
-removebook = () => {
+export let removebook = () => {
     /* remove button */
     const remove = document.querySelectorAll('.remove');
-
     remove.forEach((item) => {
       item.addEventListener('click', () => {
         item.parentElement.remove();
