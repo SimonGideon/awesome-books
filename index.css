@@ -1,3 +1,8 @@
+/* font imports */
+@font-face{
+  font-family:'digital-clock-font';
+  src: url('./modules/fonts/Technology-Bold.ttf');
+ }
 * {
   color: black;
   margin: 0;
@@ -99,8 +104,12 @@ p {
   display: none;
 }
 
+/* clock */
 #date-time {
   padding: 12px;
-  color: #AB1795;
+  color: #ab1795;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  font-family:'digital-clock-font'
 }
 
