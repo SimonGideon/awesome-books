@@ -1,5 +1,5 @@
 import {
-  addButton, title, author, list, addBook, addNew, newBook, contact, contactBook
+  addButton, title, author, addBook,
 } from './variable.js';
 
 const drko = () => {
@@ -8,7 +8,7 @@ const drko = () => {
       this.title = title;
       this.author = author;
     }
-  
+
     addbook = () => {
       addBook.innerHTML += `
       <div class="books">
@@ -27,41 +27,41 @@ const drko = () => {
         localStorage.setItem('books', JSON.stringify(books));
       }
     }
-  
+
     removebook = () => {
       /* remove button */
       const remove = document.querySelectorAll('.remove');
-  
+
       remove.forEach((item) => {
         item.addEventListener('click', () => {
           item.parentElement.remove();
           const bookname = item.name;
-  
+
           /* remove from localStorage */
           const getremove = JSON.parse(localStorage.getItem('books'));
-  
+
           const newArr = getremove.filter((object) => object.title !== bookname);
-  
+
           /* update localstorage */
           localStorage.setItem('books', JSON.stringify(newArr));
         });
       });
     }
   }
-  
+
   addButton.addEventListener('click', (e) => {
     e.preventDefault();
-  
+
     /* add book with method class */
     const ui = new Methods(title.value, author.value);
     ui.addbook();
-  
+
     /* remove book with method class */
     ui.removebook();
-  
+
     title.value = '';
     author.value = '';
   });
-}
+};
 
-export {drko};
+export default drko;

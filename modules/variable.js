@@ -11,6 +11,6 @@ const newBook = document.getElementById('newBook');
 const contact = document.getElementById('contact'); // link CONTACT
 const contactBook = document.getElementById('contactBook');
 
-export  {
-    addButton, title, author, list, addBook, addNew, newBook, contact, contactBook
-  };
+export {
+  addButton, title, author, list, addBook, addNew, newBook, contact, contactBook,
+};
