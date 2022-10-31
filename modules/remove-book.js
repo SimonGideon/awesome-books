@@ -1,8 +1,7 @@
 import {
   addButton, title, author, list, addBook, addNew, newBook, contact, contactBook
 } from './variable.js';
-const removeIt = ()=> {
-  removebook = () => {
+  const removebook = () => {
     /* remove button */
     const remove = document.querySelectorAll('.remove');
 
@@ -21,6 +20,5 @@ const removeIt = ()=> {
       });
     });
   }
-}
 
-export {removeIt};
+export {removebook};
