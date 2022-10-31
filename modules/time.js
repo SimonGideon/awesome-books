@@ -7,4 +7,4 @@ const time = () => {
   timeNow.innerText = `${localTime.toLocaleString(DateTime.DATE_FULL)}, ${localTime.toLocaleString(DateTime.TIME_WITH_SECONDS)}`;
   setTimeout(time, 1000);
 };
-export { time };
+export default time;

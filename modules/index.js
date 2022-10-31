@@ -3,7 +3,7 @@ import {
   addBook,
 } from './variable.js';
 import stylings from './stylings.js';
-import { time } from './time.js';
+import time from './time.js';
 
 stylings();
 drko();
