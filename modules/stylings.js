@@ -1,3 +1,6 @@
+import {
+  addButton, title, author, list, addBook, addNew, newBook, contact, contactBook
+} from './variable.js';
 /* initialize page */
 newBook.style.display = 'block';
 contactBook.style.display = 'none';

@@ -1,6 +1,11 @@
-export let removebook = () => {
+import {
+  addButton, title, author, list, addBook, addNew, newBook, contact, contactBook
+} from './variable.js';
+const removeIt = ()=> {
+  removebook = () => {
     /* remove button */
     const remove = document.querySelectorAll('.remove');
+
     remove.forEach((item) => {
       item.addEventListener('click', () => {
         item.parentElement.remove();
@@ -16,3 +21,6 @@ export let removebook = () => {
       });
     });
   }
+}
+
+export {removeIt};
