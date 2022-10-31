@@ -1,5 +1,5 @@
 import {
-  addButton, title, author, list, addBook, addNew, newBook, contact, contactBook,
+  list, addBook, addNew, newBook, contact, contactBook,
 } from './variable.js';
 /* initialize page */
 const stylings = () => {
