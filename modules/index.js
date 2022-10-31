@@ -1,10 +1,10 @@
-import {drko} from './add_book.js';
+import {drko} from './actions.js';
 import  {
   addButton, title, author, list, addBook, addNew, newBook, contact, contactBook
 } from './variable.js';
 import * as stylings from './stylings.js';
 drko();
-
+import {time} from './time.js';
 /* addBook - hold books after every refresh page */
 if (localStorage.getItem('books') !== null) {
   const getbook = JSON.parse(localStorage.getItem('books'));
@@ -18,4 +18,6 @@ if (localStorage.getItem('books') !== null) {
     `;
   });
 }
+
+time();
 /* ***** */

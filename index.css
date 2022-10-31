@@ -98,3 +98,9 @@ p {
 .hide {
   display: none;
 }
+
+#date-time {
+  padding: 12px;
+  color: #AB1795;
+}
+
